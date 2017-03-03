@@ -14,3 +14,11 @@ Simple boilerplate to test clientside javascript code written in ES6,  using Pha
 This is a simple boilerplate to test your clientside code. When attempting to create tests for a client library I'm writing, I noticed all the hassles required to do so:  
 You don't want to perform tests manually in a graphical browser, especially if you want to be able to use CI environments like Travis. Therefore, you use PhantomJS, a glorious headless browser, running on the command line entirely. But oh, snap! It doesn't support ES6 yet. So you set out to use Babel to transpile your ES6 code for the tests, which you would do anyway. But oh, snap! Imports or require won't work here. So you again go google a bit, after all you don't want webpack for your tests, which would be overkill for a single library. You integrate Browserify to bundle your transpiled source code, but oh, snap! The tests won't work, because you made use of those nice ES6 features in your tests, too. So you repeat the whole process for your tests, and BAM! Another few hundred lines of code and several modules just for testing your freaking client side code.  
 But at last, you have plugged together exactly what I have already done for you in this repo.
+
+## Instructions
+
+1. Clone the repository
+2. Run `npm install`
+3. Place your library code at `src`
+4. Place your tests in `test/specs/spec.js` and anything below `test/specs`
+5. Run `npm test`
