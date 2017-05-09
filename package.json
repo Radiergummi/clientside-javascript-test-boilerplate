@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist --source-maps  --presets env",
+    "build": "babel src --out-dir dist --source-maps --presets env",
     "test": "node ./test"
   },
   "author": "Moritz Friedrich",
